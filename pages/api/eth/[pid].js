@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     await Moralis.start({ apiKey: process.env.MORALIS_API_KEY });
     const {pid} = req.query;
     // const chain = EvmChain.ETHEREUM;dd
-    const chain = EvmChain.BSC;
+    const chain = EvmChain.ETHEREUM;
     const address = `${pid}`;
     // Promise.all() for receiving data async from two endpoints
     const nft = await Promise.all([
